@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "node",
+    "lib": ["es6", "dom"],
+    "types": [
+      "node",
+      "rxjs"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "public"
+  ]
+}
