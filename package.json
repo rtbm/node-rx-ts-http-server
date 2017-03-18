@@ -16,9 +16,11 @@
   "author": "rtbm",
   "license": "MIT",
   "dependencies": {
+    "@types/mongodb": "^2.1.41",
     "@types/node": "^7.0.7",
     "awesome-typescript-loader": "^3.1.2",
     "husky": "^0.13.2",
+    "mongodb": "^2.2.25",
     "raw-loader": "^0.1.6",
     "rxjs": "^5.2.0",
     "tslint": "^4.5.1",

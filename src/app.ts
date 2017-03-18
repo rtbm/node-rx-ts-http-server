@@ -1,4 +1,4 @@
-import { Server } from './modules/server';
+import { Server } from './lib/server';
 
 const PORT = process.env.PORT || 8080;
 

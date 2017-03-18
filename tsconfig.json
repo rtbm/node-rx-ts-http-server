@@ -6,7 +6,8 @@
     "lib": ["es6", "dom"],
     "types": [
       "node",
-      "rxjs"
+      "rxjs",
+      "mongodb"
     ]
   },
   "exclude": [
