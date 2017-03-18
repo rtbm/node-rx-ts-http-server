@@ -8,24 +8,18 @@ interface IArticle {
 }
 
 class ArticlesController {
-  private collection;
-
-  constructor() {
-    this.collection = Database.db.collection('articles');
-  }
-
-  public create = (req: IncomingMessage, res: ServerResponse) => {
-    this.collection.insert({
+  public static create = (req: IncomingMessage, res: ServerResponse) => ArticlesController
+    .collection.insert({
       title: 'foo',
       body: 'bar',
     } as IArticle, (err, result) => {
       if (err) {
         throw err;
       }
-
       res.end(JSON.stringify(result));
     });
-  };
+
+  private static collection = Database.db.collection('articles');
 }
 
 export { ArticlesController };
