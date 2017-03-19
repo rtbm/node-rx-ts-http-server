@@ -1,18 +1,16 @@
 <html>
   <body>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/about">About</a>
-      </li>
-      <li>
-        <a href="/create-article">Create article</a>
-      </li>
-    </ul>
+    ${require('./nav.html')}
 
     <form action="/articles" method="POST">
+      <div>
+        <label>Title</label>
+        <input type="text" name="title" />
+      </div>
+      <div>
+        <label>Body</label>
+        <textarea name="body"></textarea>
+      </div>
       <button>Send</button>
     </form>
   </body>

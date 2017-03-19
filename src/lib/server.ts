@@ -18,9 +18,7 @@ class Server {
     const dbObservable: Observable<any> = Database.connect();
 
     dbObservable.first().subscribe(({ err }) => {
-      if (err) {
-        throw err;
-      }
+      if (err) { throw err; }
 
       Router.createRoutes();
 
@@ -33,7 +31,8 @@ class Server {
 
         if (!routesMatch || !routesMatch.length) {
           res.statusCode = 404;
-          return res.end('404: Not Found');
+          res.statusMessage = 'Not found';
+          return res.end();
         }
 
         routesMatch.map(route => route.action(req, res));
